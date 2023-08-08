@@ -1,0 +1,67 @@
+<div *ngIf="isLoading">
+    <app-loader />
+</div>
+<div class="content">
+    <h2>Edit Book</h2>
+    <p class="message-p">{{bookMessage}}</p>
+    <div class="book-form">
+        <form #editBook="ngForm" (ngSubmit)="submit(editBook.value)">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" #inputTitle="ngModel" ngModel="{{bookData.title}}" required
+                    minlength="5">
+                <ng-container *ngIf="inputTitle.touched">
+                    <p class="error" *ngIf="inputTitle.errors?.['required']">Title is required!</p>
+                    <p class="error" *ngIf="inputTitle.errors?.['minlength']">Title must be at least 5 characters!</p>
+                </ng-container>
+            </div>
+            <div class="form-group">
+                <label for="author">Author</label>
+                <input type="text" id="author" name="author" #inputAuthor="ngModel" ngModel="{{bookData.author}}">
+                <ng-container *ngIf="inputAuthor.touched">
+                    <p class="error" *ngIf="inputAuthor.errors?.['required']">Author is required!</p>
+                    <p class="error" *ngIf="inputAuthor.errors?.['minlength']">Author must be at least 5 characters!</p>
+                </ng-container>
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" #inputDescription="ngModel"
+                    ngModel="{{bookData.description}}"></textarea>
+                <ng-container *ngIf="inputDescription.touched">
+                    <p class="error" *ngIf="inputDescription.errors?.['required']">Description is required!</p>
+                    <p class="error" *ngIf="inputDescription.errors?.['minlength']">Description must be at least 10
+                        characters!</p>
+                </ng-container>
+            </div>
+            <div class="form-group">
+                <label for="genre">Genre</label>
+                <select name="genre" id="genre" [(ngModel)]="bookData.genre" required>
+                    <option [value]="bookData.genre">{{bookData.genre}}</option>
+                    <option value="Economics">Economics</option>
+                    <option value="Comic-books">Comic books</option>
+                    <option value="Childrens">Children's</option>
+                    <option value="Society">Society</option>
+                    <option value="Lifestyle">Lifestyle</option>
+                    <option value="Biography">Biography</option>
+                    <option value="History">History</option>
+                    <option value="Health">Health</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Philosophy">Philosophy</option>
+                    <option value="Self-Help">Self-help</option>
+                </select>
+                <!-- <label for="genre">Genre</label>
+                <input type="text" id="genre" name="genre" #inputGenre="ngModel" ngModel="{{bookData.genre}}" > -->
+            </div>
+            <div class="form-group">
+                <label for="image">Image URL</label>
+                <input type="text" id="image" name="image" #inputImage="ngModel" ngModel="{{bookData.image}}">
+                <ng-container *ngIf="inputImage.touched">
+                    <p class="error" *ngIf="inputImage.errors?.['required']">Image is required!</p>
+                </ng-container>
+            </div>
+            <div class="button-group">
+                <button type="submit" class="button">Post</button>
+            </div>
+        </form>
+    </div>
+</div>

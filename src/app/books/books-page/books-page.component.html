@@ -1,29 +1,30 @@
-<div class="content">
+<div *ngIf="isLoading">
+    <app-loader />
+</div>
+
+<div class="content" *ngIf="!isLoading">
     <h2>Books</h2>
-    <div class="books-container">
+    <div class="books-container" *ngIf="isThereBooks">
         <div *ngFor="let book of booksList" class="book-card">
             <img src="{{book.image}}" alt="Book 1">
             <div class="book-info">
                 <h3 class="book-title"> {{book.title}}</h3>
                 <p class="book-author">{{book.author}}</p>
-                <p class="book-description">{{book.description}}</p>
+                <p class="book-description">{{book.description.slice(0, 150)}}...</p>
                 <p class="book-genre">{{book.gerne}}</p>
                 <div class="rating">
                     <span class="rating-stars">⭐⭐⭐⭐⭐</span>
                     <span class="rating-value">{{book.rating}}</span>
-                </div>
-                <div class="reviews">
-                    <h4>Reviews</h4>
-                    <ul class="review-list">
-                        <li class="review">Review 1</li>
-                        <li class="review">Review 2</li>
-                        <li class="review">Review 3</li>
-                    </ul>
-                </div>
-                <div class="button-group">
-                    <button type="submit" class="button">Details</button>
+                    <div class="button-group">
+                        <a [routerLink]="book.id" class="normal">
+                            <button type="button" class="button">Details</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="no-books-container" *ngIf="!isThereBooks">
+        <p>There is no books yet.</p>
     </div>
 </div>

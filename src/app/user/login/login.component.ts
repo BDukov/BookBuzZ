@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserServiceService } from '../user-service.service';
 import { NgForm } from '@angular/forms';
-import { AuthService } from 'src/app/shared/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +12,15 @@ export class LoginComponent implements OnInit {
   email: string = '';
   password: string = '';
 
-  constructor(private auth: AuthService) {}
+  loginMessage: undefined | string;
+
+  isLoggedIn: boolean = false;
+  form: any;
+
+  constructor(
+    private userService: UserServiceService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {}
 
@@ -22,9 +29,23 @@ export class LoginComponent implements OnInit {
       return;
     }
 
-    this.auth.login(this.email, this.password);
+    this.isLoggedIn = true;
 
-    this.email = '';
-    this.password = '';
+    this.userService
+      .login({
+        email: form.value.email,
+        password: form.value.password,
+      })
+      .subscribe(
+        () => {
+          this.router.navigate(['/books']);
+        },
+        (error: any) => {
+          this.loginMessage = error.message;
+          setTimeout(() => {
+            this.loginMessage = undefined;
+          }, 3000);
+        }
+      );
   }
 }

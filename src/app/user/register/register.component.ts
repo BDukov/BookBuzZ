@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { UserServiceService } from '../user-service.service';
 import { Router } from '@angular/router';
-import { UserRegister } from 'src/app/types/user-ragister';
 import { matchPasswordsValidator } from 'src/app/shared/validators/match-passwords-validator';
 
 @Component({
@@ -20,6 +19,8 @@ export class RegisterComponent {
     validators: [matchPasswordsValidator('password', 'passwordConfirm')],
   });
 
+  user!: string;
+
   constructor(
     private fb: FormBuilder,
     private userService: UserServiceService,
@@ -31,13 +32,18 @@ export class RegisterComponent {
       return;
     }
 
-    const { firstName, lastName, email, password } =
-      this.form.value as UserRegister;
+    const userData: any = Object.assign(this.form.value, {
+      email: this.form.value.email,
+    });
+    console.log(userData);
 
     this.userService
-      .register(firstName, lastName, email, password)
-      .subscribe(() => {
-        this.router.navigate(['/login']);
+      .register(userData)
+      .then((res: any) => {
+        this.router.navigate(['/auth/login']);
+      })
+      .catch((error: any) => {
+        console.error(error);
       });
   }
 }
