@@ -27,11 +27,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 
-#BookBuzz - Angular Project Resume
-##Overview:
+BookBuzz - Angular Project Resume
+Overview:
 BookBuzz is an engaging web application built using Angular 16 that provides a platform for book enthusiasts to manage their favorite books, connect with other readers, and share their thoughts through reviews. The application features authentication, database integration with Firebase, user profiles, book management, and more.
 
-##Features:
+Features:
 1. Authentication:
 Implemented a secure authentication system allowing users to register and log in to the platform.
 Users can create their profiles, enhancing the personalized experience.
