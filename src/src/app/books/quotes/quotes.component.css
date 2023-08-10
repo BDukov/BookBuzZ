@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #f8c291;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .content {
+    text-align: center;
+    max-width: 800px;
+    margin: 100px auto 40px; /* Adjust the margin to add more space down */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.big-quote {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.quote-cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.quote-card {
+    background-color: #f8c291; /* Warm color */
+    color: #fff; /* White text */
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.quote-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.quotation-mark {
+    font-size: 36px;
+    margin: 0 10px;
+}
+
+.quote-book {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Style the quotation marks to make them bigger and beautiful */
+.quotation-mark::before {
+    content: "“";
+    font-size: 60px;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    color: #f8c291; /* Warm color */
+}
+
+.quotation-mark::after {
+    content: "”";
+    font-size: 60px;
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    color: #f8c291; /* Warm color */
+}
