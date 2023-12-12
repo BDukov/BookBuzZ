@@ -1,68 +1,107 @@
-# BookStore
+# BookBuzZ-Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+This is my first angular deployed Application. You can try it here -> https://bdukov.github.io/BookBuzZ-Angular/home
 
-## Development server
+<h2> Overview: </h2>
+BookBuzz is an application for literature lovers. It allows you to easily catalog your favourite books, write insightful reviews, and engage in discussions. You can share thought-provoking quotes from your favourite books, as well as edit your personal information. The project intends to unite book lovers and provide space to discover new reads, and share one's thoughts on literature. The project boasts robust features like user authentication, seamless Firebase integration, and an elegant pure CSS design.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+<h1>Key Features:</h1>
+<h2> 1. Authentication:   </h2>
+Robust user authentication system enables secure registration and login.
+Personalized user profiles enhance the tailored experience.
+<p> Logged-in users can: </p>
+<ul> 
+  <li> Add new books </li>
+  <li> Add new quotes </li>
+  <li> Write reviews for every book</li>
+  <li> Edit or delete books if they are owners</li>
+  <li> See their Profile page</li>
+  <li> Edit their Profile</li>
+</ul>
+<p> Not logged-in users can access: </p>
+<ul> 
+  <li> Home page </li>
+  <li> Login page </li>
+  <li> Register page</li>
+  <li> Books page </li>
+  <li> Qoutes page</li>
+</ul>
 
-## Code scaffolding
+<h2> 2. Book Management: </h2>
+<ul>
+  <li>Intuitive interface for effortlessly adding new books with titles, authors, descriptions, and reviews. </li>
+  <li> Empowering users to edit their book entries for a personalized touch. </li>
+  <li>Smooth book deletion process for owners, ensuring content control. </li>
+</ul>
+<h2> 3. Interactive Reviews:   </h2>
+Engaging review system for sharing thoughtful opinions on books.
+Users can submit reviews for books added by other users, fostering a vibrant community.
+<h2> 4. Profile Customization: </h2>
+<ul>
+  <li>User-friendly profile editing feature allows users to update email and manage their owner's books. </li>
+</ul>
+<h2> 5. Inspiring Quotes: </h2>
+<ul>
+  <li>Curate memorable quotes from favorite books, creating a collection of literary gems. </li>
+  <li> The quotes section adds a touch of elegance to the user experience.</li>
+</ul>
+<h2> 6. Aesthetic CSS: </h2>
+<ul>
+  <li> Stylish design with pure CSS for an attractive and responsive UI. </li>
+</ul>
+<h2> 7. Angular Animations:  </h2>
+<ul>
+  <li>Angular animations enrich UX through dynamic effects like smooth slides, and transforms.</li>
+</ul>
+<h2> 8. Firebase Magic:  </h2>
+<ul> 
+<li>Seamless Firebase integration as the backend database for efficient data management. </li>
+<li> Real-time synchronization ensures fluid user interactions and data updates.</li>
+</ul>
+<h2> 9. Deployment:  </h2>
+<ul>
+  <li> You can reach BookBuzZ in GitHub Pages here => https://bdukov.github.io/BookBuzZ-Angular/home</li>
+</ul>
+<h2> Tech Stack:  </h2>
+<p> Angular 16: Powering the frontend with dynamic and responsive interfaces.  </p>
+<p> TypeScript: Elevating code quality and maintainability.  </p>
+<p> Firebase: Providing real-time data storage and secure authentication.    </p>
+<p> Pure CSS: Crafting a visually appealing and user-centric design. </p>
+<h2> Achievements:  </h2>
+Successfully built a fully functional Angular application from scratch, showcasing advanced features.
+Prioritized responsive design and user-centric interactions for an optimal user experience.
+<h2>Future Plans:</h2>
+Implementing a sophisticated recommendation engine for personalized book suggestions.
+Enabling social sharing to allow users to spread their favorite books and reviews.
+<h2>Conclusion:</h2>
+BookBuzz exemplifies mastery in TypeScript, Angular development, Firebase integration, and responsive design. This comprehensive Angular 16 project, boasting book management, reviews, and profiles, showcases my ability to create captivating and user-focused web applications.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<h1> DEMO </h1>
+<h2> Usage </h2>
+  <ul>
+    <li>npm install</li>
+    <li>ng serve</li>
+  </ul>
+<h2> Demo User </h2>
+<p> email: peter@abv.bg </p>
+<p> password: 123456</p>
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-
-BookBuzz - Angular Project Resume
-Overview:
-BookBuzz is an engaging web application built using Angular 16 that provides a platform for book enthusiasts to manage their favorite books, connect with other readers, and share their thoughts through reviews. The application features authentication, database integration with Firebase, user profiles, book management, and more.
-
-Features:
-1. Authentication:
-Implemented a secure authentication system allowing users to register and log in to the platform.
-Users can create their profiles, enhancing the personalized experience.
-2. Book Management:
-Developed a user-friendly interface for adding new books, including details such as title, author, description, and reviews.
-Enabled users to edit their own books, ensuring they have complete control over their entries.
-Implemented a delete functionality for users who are book owners, ensuring seamless content management.
-3. Review System:
-Designed a review feature allowing users to provide their insights and opinions on books.
-Users can write reviews for books authored by others, fostering a sense of community interaction.
-4. Profile Editing:
-Created an intuitive profile editing system, enabling users to update their information and preferences.
-5. Quote Collection:
-Integrated a functionality for users to curate and add quotes from their favorite books.
-The quotes section enhances the user experience by allowing them to highlight memorable passages.
-6. Styling:
-Utilized pure CSS for styling, resulting in a visually appealing and responsive user interface.
-7. Firebase Integration:
-Leveraged Firebase as the backend database for efficient data storage and retrieval.
-Ensured seamless synchronization of user data and book information between the application and the database.
-Technologies Used:
-Angular 16: Frontend framework for building dynamic and responsive user interfaces.
-TypeScript: Superset of JavaScript used to enhance code quality and maintainability.
-Firebase: Backend-as-a-Service (BaaS) for real-time data storage and authentication.
-Pure CSS: Custom styling for a visually appealing and user-friendly interface.
-Achievements:
-Successfully developed a fully functional Angular application from scratch, incorporating advanced features and functionalities.
-Ensured a smooth user experience by implementing responsive design principles and user-centered interactions.
-Effectively collaborated with team members, incorporating feedback to enhance the application's features and usability.
-Future Enhancements:
-Plan to implement a recommendation engine to suggest books based on user preferences and reading history.
-Incorporate social sharing features to allow users to share their favorite books and reviews on external platforms.
-Conclusion:
-BookBuzz is a comprehensive Angular 16 project that showcases your proficiency in TypeScript, Angular development, Firebase integration, and responsive design. The application's range of features, including book management, review system, and user profiles, demonstrates your ability to create engaging and user-centric web applications.
+<h1> Screenshots </h1>
+<h2> Home Page </h2>
+<img src="https://github.com/BDukov/BookBuzZ-Angular/assets/107854265/499172b9-74cf-409c-8ddd-31918b22cdf6"> </img>
+<h2> Register Page </h2>
+<img src="https://github.com/BDukov/BookBuzZ-Angular/assets/107854265/4403e42d-eeab-4b8e-89a3-f9225ff7ffae"> </img>
+<h2> Login Page </h2>
+<img src="https://github.com/BDukov/BookBuzZ-Angular/assets/107854265/2f410a10-4ff2-473c-b11b-7509ef245bc8"> </img>
+<h2> Books Page</h2>
+<img src="https://github.com/BDukov/BookBuzZ-Angular/assets/107854265/af0403ab-2b71-4614-b6f7-00e3dc67084d"> </img>
+<h2> Quotes Page</h2>
+<img src="https://github.com/BDukov/BookBuzZ-Angular/assets/107854265/c85b4f30-ed71-47bf-9a09-4c18398d07a9"> </img>
+<h2> Add Book </h2>
+<img src="https://github.com/BDukov/BookBuzZ-Angular/assets/107854265/f05075a0-3e66-48aa-9433-a7435edcce06"> </img>
+<h2> Add Quote </h2>
+<img src="https://github.com/BDukov/BookBuzZ-Angular/assets/107854265/428e362a-902f-46cc-bf55-267a97b534cd"> </img>
+<h2> Details Page </h2>
+<img src="https://github.com/BDukov/BookBuzZ-Angular/assets/107854265/f8b3e840-9413-46a0-b8c9-68a727387252"> </img>
+<h2> Error Page</h2>
+<img src="https://github.com/BDukov/BookBuzZ-Angular/assets/107854265/d3f6d9a4-d063-47db-bbd4-66b5e3cff4b1"> </img>
